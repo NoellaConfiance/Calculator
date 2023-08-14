@@ -2,6 +2,7 @@ let operator='';
 let previousValue='';
 let currentValue='';
 
+
 document.addEventListener("DOMContentLoaded", function(){
     let clear = document.querySelector(".clear");
     let equal = document.querySelector(".equal");
@@ -12,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function(){
     
     let previousScreen= document.querySelector(".previous");
     let currentScreen= document.querySelector(".current");
+
+    
+
 
     numbers.forEach((number) => number.addEventListener("click", function(e){
          handleNumber(e.target.textContent)
@@ -75,6 +79,7 @@ function operate(){
     previousValue = roundNumber(previousValue);
     previousValue = previousValue.toString();
     currentValue = currentValue.toString();
+    previousValue.textcontent = currentValue;
 
 }
 
@@ -87,3 +92,17 @@ function addDecimal(){
         currentValue += '.';
     }
 }
+
+document.addEventListener("click" , function(){
+    const reminderPrevious = document.querySelector(".reminder");
+    const signplusMinus = document.querySelector(".plus-minus");
+    const DeletionPoint = document.querySelector(".Delete");
+
+    reminderPrevious.addEventListener("click", function(){
+        if (currentValue === previousValue);
+            return (operator = newOperation);
+    
+    })
+})
+
+    
